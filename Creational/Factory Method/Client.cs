@@ -1,8 +1,8 @@
 ﻿namespace Factory_Method;
 
-public class Client
+internal sealed record Client
 {
-    public static void Main()
+    internal static void Main()
     {
         Console.WriteLine("App: Launched with the ConcreteCreator1.");
 
@@ -13,5 +13,5 @@ public class Client
         ClientCode(new ConcreteCreator2());
     }
 
-    public static void ClientCode(Creator creator) => Console.WriteLine($"Client: I'm not aware of the creator's class, but it still works.\n{creator.SomeOperation()}");
+    internal static void ClientCode(Creator creator) => Console.WriteLine($"Client: I'm not aware of the creator's class, but it still works.\n{creator.SomeOperation()}");
 }

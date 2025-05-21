@@ -1,6 +1,6 @@
 ﻿namespace Factory_Method;
 
-public interface IProduct
+internal interface IProduct
 {
-    public string Operation();
+    internal string Operation();
 }
