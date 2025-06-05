@@ -1,13 +1,16 @@
-﻿var s1 = Singleton.Singleton.GetInstance();
-var s2 = Singleton.Singleton.GetInstance();
+﻿using static Singleton.Singleton;
+using static System.Console;
+
+var s1 = GetInstance();
+var s2 = GetInstance();
 
 if (s1 == s2)
 {
-    Console.WriteLine("Singleton works, both variables contain the same instance.");
+    WriteLine("Singleton works, both variables contain the same instance.");
 }
 else
 {
-    Console.WriteLine("Singleton failed, variables contain different instances.");
+    WriteLine("Singleton failed, variables contain different instances.");
 }
 
 /*
