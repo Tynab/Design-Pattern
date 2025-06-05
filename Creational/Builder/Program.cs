@@ -1,26 +1,27 @@
 ﻿using Builder;
+using static System.Console;
 
 var director = new Director();
 var builder = new ConcreteBuilder();
 
 director.Builder = builder;
 
-Console.WriteLine("Standard basic product:");
+WriteLine("Standard basic product:");
 
 director.BuildMinimalViableProduct();
 
-Console.WriteLine(builder.GetProduct().ListParts());
-Console.WriteLine("Standard full featured product:");
+WriteLine(builder.GetProduct().ListParts());
+WriteLine("Standard full featured product:");
 
 director.BuildFullFeaturedProduct();
 
-Console.WriteLine(builder.GetProduct().ListParts());
-Console.WriteLine("Custom product:");
+WriteLine(builder.GetProduct().ListParts());
+WriteLine("Custom product:");
 
 builder.BuildPartA();
 builder.BuildPartC();
 
-Console.Write(builder.GetProduct().ListParts());
+Write(builder.GetProduct().ListParts());
 
 /*
  * Standard basic product:
